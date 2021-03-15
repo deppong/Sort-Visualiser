@@ -2,6 +2,7 @@
 #include <SFML/Window.hpp>
 #include <iostream>
 #include "algorithms/bubbleSort.hpp"
+#include "renderer.hpp"
 #include "shuffleArray.hpp"
 
 using namespace sf;
