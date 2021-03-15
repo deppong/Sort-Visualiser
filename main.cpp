@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <iostream>
-#include "bubbleSort.h"
+#include "algorithms/bubbleSort.h"
 #include "shuffleArray.h"
 
 using namespace sf;
