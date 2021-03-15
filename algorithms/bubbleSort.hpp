@@ -1,1 +1,1 @@
-void bubbleSort(float *arr, int arrSize);
+void bubbleSort(sf::RenderWindow &window, float *arr, int arrSize);
