@@ -12,7 +12,6 @@ void bubbleSort(sf::RenderWindow &window, float *arr, int arrSize) {
                arr[j] = arr[j+1];
                arr[j+1] = tmp;
                swapped = true;
-               delay(1);
                updateRects(window, arr, arrSize);
             }
         }

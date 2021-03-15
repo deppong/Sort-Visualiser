@@ -8,7 +8,7 @@ using namespace sf;
 static int width = 1280;
 static int height = 720;
 
-static const int numOfRect = 100;
+static const int numOfRect = 250;
 
 float deltaY = height / float(numOfRect);
 float deltaX = width / float(numOfRect);
@@ -36,6 +36,9 @@ int main() {
                         break;
                     case Keyboard::B:
                         sortArr(window, 0, values, numOfRect);
+                        break;
+                    case Keyboard::G:
+                        sortArr(window, 1, values, numOfRect);
                         break;
                     default:
                         break;
