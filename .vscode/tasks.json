@@ -10,11 +10,16 @@
                 "algorithms/*.cpp",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-DSFML_STATIC",
                 "-IC:\\lib\\SFML-2.5.1\\include",
                 "-LC:\\lib\\SFML-2.5.1\\lib",
-                "-lsfml-graphics",
-                "-lsfml-window",
-                "-lsfml-system",
+                "-lsfml-graphics-s",
+                "-lsfml-window-s",
+                "-lsfml-system-s",
+                "-lopengl32",
+                "-lfreetype",
+                "-lgdi32",
+                "-lwinmm"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

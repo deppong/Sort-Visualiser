@@ -1,8 +1,8 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <iostream>
-#include "algorithms/bubbleSort.h"
-#include "shuffleArray.h"
+#include "algorithms/bubbleSort.hpp"
+#include "shuffleArray.hpp"
 
 using namespace sf;
 static int width = 1280;

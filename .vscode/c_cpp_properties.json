@@ -8,6 +8,7 @@
                 "${workspaceFolder}"
             ],
             "defines": [
+                "SFML_STATIC",
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
