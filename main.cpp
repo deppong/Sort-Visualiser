@@ -20,10 +20,8 @@ int main() {
     window.setFramerateLimit(60);
 
     for(int i = 0; i < numOfRect; i++) {
-        values[i] = i;
+        values[i] = i + 1;
     }
-
-    shuffleArray(values, numOfRect);
 
     while(window.isOpen()) {
         Event event;
@@ -32,8 +30,15 @@ int main() {
             if (event.type == Event::Closed)
                 window.close();
             else if(event.type == Event::KeyPressed) {
-                if(event.key.code == Keyboard::S) {
-                shuffleArray(values, numOfRect);
+                switch(event.key.code) {
+                    case Keyboard::S:
+                        shuffleArray(values, numOfRect);
+                        break;
+                    case Keyboard::B:
+                        bubbleSort(values, numOfRect);
+                        break;
+                    default:
+                        break;
                 }
             }
         }
@@ -41,11 +46,12 @@ int main() {
         window.clear(Color::Black);
 
         for(int i = 0; i < numOfRect; i++) {
-            RectangleShape rectangle(Vector2f(deltaX, height-values[i]));//make a rectangle with the width being deltaX and the height the size of the monitor - the value it corrisponds to.   
+            RectangleShape rectangle(Vector2f(deltaX, deltaY*values[i]));//make a rectangle with the width being deltaX and the height the size of the monitor - the value it corrisponds to.
             rectangle.setFillColor(Color::White);
-            rectangle.move(deltaX*i, deltaY*values[i]);
+            rectangle.move(deltaX*i, height-(deltaY*values[i]));
 
             window.draw(rectangle);
+
         }
         window.display();
 
