@@ -5,6 +5,7 @@
 #include "algorithms/gnuSort.hpp"
 
 void sortArr(sf::RenderWindow &window, int type, float *arr, int arrSize) {
+    window.setTitle("Sorting...");
     switch (type) {
     case 0:
         bubbleSort(window, arr, arrSize);
@@ -14,4 +15,5 @@ void sortArr(sf::RenderWindow &window, int type, float *arr, int arrSize) {
     default:
         break;
     }
+    window.setTitle("Sort Visualizer - Sorted");
 }

@@ -4,5 +4,5 @@
 
 void gnuSort(sf::RenderWindow &window, float *arr, int arrSize) {
     std::sort(arr, arr + arrSize);
-    updateRects(window, arr, arrSize);
+    //updateRects(window, arr, arrSize, arr);
 }

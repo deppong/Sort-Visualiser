@@ -15,7 +15,7 @@ float deltaX = width / float(numOfRect);
 float values [numOfRect];
 
 int main() {
-    RenderWindow window(VideoMode(width, height), "Sort Visualiser");
+    RenderWindow window(VideoMode(width, height), "Sort Visualizer");
     window.setKeyRepeatEnabled(false);
     //window.setFramerateLimit(60);
 
@@ -35,10 +35,10 @@ int main() {
                         shuffleArray(window, values, numOfRect);
                         break;
                     case Keyboard::B:
-                        sortArr(window, 0, values, numOfRect);
+                        sortArr(window, 0, values, numOfRect); //bubble sort
                         break;
                     case Keyboard::G:
-                        sortArr(window, 1, values, numOfRect);
+                        sortArr(window, 1, values, numOfRect); //gnu sort
                         break;
                     default:
                         break;
@@ -58,7 +58,7 @@ int main() {
         }*/
         //window.display();
         //shuffleArray(window, values, numOfRect);
-        updateRects(window, values, numOfRect);
+        updateRects(window, values, numOfRect, values);
 
     }
 
