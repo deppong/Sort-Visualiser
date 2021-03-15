@@ -22,7 +22,7 @@ void updateRects(sf::RenderWindow &window, float *arr, int numOfRect, float *com
         if(compArr[i] != arr[i]) {
             rectangle.setFillColor(sf::Color::Red);
         } else {
-            rectangle.setFillColor(sf::Color(128, arr[i], 148));
+            rectangle.setFillColor(sf::Color(64, 128, arr[i]));
         }
         rectangle.move(deltaX*i, height-(deltaY*arr[i]));
 
