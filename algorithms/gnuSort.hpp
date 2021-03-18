@@ -1,1 +1,0 @@
-void gnuSort(sf::RenderWindow &window, float *arr, int arrSize);

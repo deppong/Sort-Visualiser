@@ -5,16 +5,18 @@
 #include "renderer.hpp"
 
 using namespace sf;
-static int width = 1280;
-static int height = 720;
-
-static const int numOfRect = 250;
-
-float deltaY = height / float(numOfRect);
-float deltaX = width / float(numOfRect);
-float values [numOfRect];
 
 int main() {
+
+    int width = 1280;
+    int height = 720;
+
+    int numOfRect = 250;
+
+    float deltaY = height / float(numOfRect);
+    float deltaX = width / float(numOfRect);
+    float values [numOfRect];
+
     RenderWindow window(VideoMode(width, height), "Sort Visualizer");
     window.setKeyRepeatEnabled(false);
     //window.setFramerateLimit(60);
@@ -37,29 +39,15 @@ int main() {
                     case Keyboard::B:
                         sortArr(window, 0, values, numOfRect); //bubble sort
                         break;
-                    case Keyboard::G:
-                        sortArr(window, 1, values, numOfRect); //gnu sort
-                        break;
+                    case Keyboard::M:
+                        sortArr(window, 1, values, numOfRect);
                     default:
                         break;
                 }
             }
         }
-        
-        //window.clear(Color::Black);
 
-        /*for(int i = 0; i < numOfRect; i++) {
-            RectangleShape rectangle(Vector2f(deltaX, deltaY*values[i]));//make a rectangle with the width being deltaX and the height the size of the monitor - the value it corrisponds to.
-            rectangle.setFillColor(Color::White);
-            rectangle.move(deltaX*i, height-(deltaY*values[i]));
-
-            window.draw(rectangle);
-
-        }*/
-        //window.display();
-        //shuffleArray(window, values, numOfRect);
         updateRects(window, values, numOfRect, values);
-
     }
 
     return 0;

@@ -16,10 +16,10 @@
                 "-lsfml-graphics-s",
                 "-lsfml-window-s",
                 "-lsfml-system-s",
+                "-lwinmm",
                 "-lopengl32",
                 "-lfreetype",
-                "-lgdi32",
-                "-lwinmm"
+                "-lgdi32"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

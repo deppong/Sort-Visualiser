@@ -1,15 +1,19 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <stdlib.h>
 #include <time.h>
 #include <chrono>
 #include <thread>
+
+
 
 void delay(int delay) {
     std::this_thread::sleep_for(std::chrono::milliseconds(delay));
 }
 
 void updateRects(sf::RenderWindow &window, float *arr, int numOfRect, float *compArr = NULL) {
+
     static int width = 1280;
     static int height = 720;
     float deltaX = width/float(numOfRect);
@@ -30,6 +34,7 @@ void updateRects(sf::RenderWindow &window, float *arr, int numOfRect, float *com
     }
     window.display();
 }
+
 void shuffleArray(sf::RenderWindow &window, float *arr, int arrSize) {
     window.setTitle("Shuffling... ");
     if(arrSize > 1) {
