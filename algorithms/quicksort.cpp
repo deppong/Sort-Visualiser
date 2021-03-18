@@ -18,12 +18,12 @@ int partition (float *arr, int low, int high, sf::RenderWindow &window, float *c
             i++;
             swap(&arr[i], &arr[j]);
             updateRects(window, arr, 250, compArr);
-            //delay(1);
+            delay(1);
         }
     }
     swap(&arr[i + 1], &arr[high]);
     updateRects(window, arr, 250, compArr);
-    //delay(1);
+    delay(1);
     return (i + 1);
 }
 
