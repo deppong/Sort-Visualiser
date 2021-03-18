@@ -11,7 +11,7 @@ int main() {
     int width = 1280;
     int height = 720;
 
-    int numOfRect = 250;
+    int numOfRect = 255;
 
     float deltaY = height / float(numOfRect);
     float deltaX = width / float(numOfRect);
@@ -47,7 +47,7 @@ int main() {
             }
         }
 
-        updateRects(window, values, numOfRect, values);
+        updateRects(window, values, numOfRect, -1);
     }
 
     return 0;

@@ -1,2 +1,2 @@
 #pragma once
-void quicksort (float *arr, int low, int high, sf::RenderWindow &window);
+void quicksort (float *arr, int low, int high, sf::RenderWindow &window, sf::Sound &sound);

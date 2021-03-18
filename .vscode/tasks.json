@@ -15,11 +15,18 @@
                 "-LC:\\lib\\SFML-2.5.1\\lib",
                 "-lsfml-graphics-s",
                 "-lsfml-window-s",
+                "-lsfml-audio-s",
                 "-lsfml-system-s",
                 "-lwinmm",
                 "-lopengl32",
                 "-lfreetype",
-                "-lgdi32"
+                "-lgdi32",
+                "-lopenal32",
+                "-lflac",
+                "-lvorbisenc",
+                "-lvorbisfile",
+                "-lvorbis",
+                "-logg"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
