@@ -36,13 +36,15 @@ void updateRects(sf::RenderWindow &window, float *arr, int numOfRect, int pointe
     window.display();
 }
 
-void shuffleArray(sf::RenderWindow &window, float *arr, int arrSize) {
+void shuffleArray(sf::RenderWindow &window, float *arr, int arrSize, sf::Text &text) {
     sf::SoundBuffer buffer;
     buffer.loadFromFile("audio/beep.wav");
     sf::Sound sound;
     sound.setBuffer(buffer);
     sound.setVolume(50.0f);
     window.setTitle("Shuffling... ");
+    text.setString("Shuffling...");
+
     if(arrSize > 1) {
         srand(time(NULL));
         float compArr[arrSize];
@@ -61,6 +63,7 @@ void shuffleArray(sf::RenderWindow &window, float *arr, int arrSize) {
         }
         
     }
+    text.setString("Shuffled");
     window.setTitle("Sort Visualizer - Shuffled");
 }
 

@@ -1,2 +1,2 @@
 #pragma once
-void sortArr(sf::RenderWindow &window, int type, float *arr, int arrSize);
+void sortArr(sf::RenderWindow &window, int type, float *arr, int arrSize, sf::Text &text);

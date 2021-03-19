@@ -4,8 +4,9 @@
 #include "renderer.hpp"
 #include "algorithms/bubbleSort.hpp"
 #include "algorithms/quickSort.hpp"
+#include "algorithms/selectionSort.hpp"
 
-void sortArr(sf::RenderWindow &window, int type, float *arr, int arrSize) {
+void sortArr(sf::RenderWindow &window, int type, float *arr, int arrSize, sf::Text &text) {
     window.setTitle("Sorting...");
     sf::SoundBuffer buffer;
     buffer.loadFromFile("audio/beep.wav");
@@ -16,9 +17,11 @@ void sortArr(sf::RenderWindow &window, int type, float *arr, int arrSize) {
     float B [arrSize];
     switch (type) {
     case 0:
+        text.setString("Bubble Sort - Delay: 0ms");
         bubbleSort(window, arr, arrSize);
         break;
     case 1:
+        text.setString("Quick Sort  - Delay: 1ms");
         quicksort(arr, 0, arrSize - 1, window, sound);
         for(int i = 0; i < arrSize; i++) {
             sound.setPitch((1.0f + arr[i])/ 100.0f);
@@ -26,6 +29,11 @@ void sortArr(sf::RenderWindow &window, int type, float *arr, int arrSize) {
             updateRects(window, arr, arrSize, i);
             delay(1);
         }
+        window.setTitle("Sorting Visualizer - SORTED");
+        break;
+    case 2:
+        text.setString("Selection Sort - Delay: 1ms");
+        selectionSort(window, arr, arrSize, sound);
         window.setTitle("Sorting Visualizer - SORTED");
     default:
         break;
