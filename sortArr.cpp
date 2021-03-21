@@ -5,6 +5,7 @@
 #include "algorithms/bubbleSort.hpp"
 #include "algorithms/quickSort.hpp"
 #include "algorithms/selectionSort.hpp"
+#include "algorithms/insertionSort.hpp"
 
 void sortArr(sf::RenderWindow &window, int type, float *arr, int arrSize, sf::Text &text) {
     window.setTitle("Sorting...");
@@ -35,6 +36,16 @@ void sortArr(sf::RenderWindow &window, int type, float *arr, int arrSize, sf::Te
         text.setString("Selection Sort - Delay: 1ms");
         selectionSort(window, arr, arrSize, sound);
         window.setTitle("Sorting Visualizer - SORTED");
+    case 3:
+        insertionSort(window, arr, arrSize, sound);
+        for(int i = 0; i < arrSize; i++) {
+            sound.setPitch((1.0f + arr[i])/ 100.0f);
+            sound.play();
+            updateRects(window, arr, arrSize, i);
+            delay(1);
+        }
+        window.setTitle("Sorting Visualizer - SORTED");
+        break;
     default:
         break;
     }

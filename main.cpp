@@ -60,6 +60,10 @@ int main() {
                         break;
                     case Keyboard::C:
                         sortArr(window, 2, values, numOfRect, text); // selection sort
+                        break;
+                    case Keyboard::I:
+                        sortArr(window, 3, values, numOfRect, text);
+                        break;
                     default:
                     break;
                 }
